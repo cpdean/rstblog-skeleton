@@ -1,0 +1,3 @@
+[submodule "rstblog"]
+	path = rstblog
+	url = git://github.com/mitsuhiko/rstblog.git
