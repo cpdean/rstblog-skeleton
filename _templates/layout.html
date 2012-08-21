@@ -1,17 +1,36 @@
-<!DOCTYPE HTML>
+<!doctype html>
 <html>
-<head>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8">
-    {% block htmlhead %}
-
-    <title>{% block title %}Yea{% endblock %}</title>
-
-    {% endblock %}
-    
-</head>
-<body>
-    <h1> This is a site </h1>
-    {% block body %}{% endblock %}
-    <h6> Copyright, me </h6>
-</body>
+  <head>
+    <meta charset=utf-8>
+  {% block htmlhead %}
+    <title>{% block title %}Home{% endblock %}</title>
+    <link rel="stylesheet" href="/static/style.css" type="text/css">
+    <link href="/feed.atom" rel="alternate" title="Recent Blog Posts" type="application/atom+xml">
+    {%- for link in links %}
+    <link rel="{{ link.rel }}" href="{{ link.href }}"{%
+      if link.media %} media="{{ link.media }}"{% endif %} type="{{ link.type }}">
+    {%- endfor %}
+  {% endblock %}
+  </head>
+  <body>
+    <div class=container>
+      <div class=header>
+        <a href="/about/">Hey</a>
+      </div>
+      <div class=navigation>
+        <ul>
+          <li><a href="/">blog</a>
+          <li><a href="/archive/">archive</a>
+          <li><a href="/tags/">tags</a>
+          <li><a href="/about/">about</a>
+        </ul>
+      </div>
+      <div class=body>
+      {% block body %}{% endblock %}
+      </div>
+      <div class=footer>
+        &copy; {{ format_date(format='YYYY') }}
+      </div>
+    </div>
+  </body>
 </html>

@@ -1,5 +1,5 @@
 ---
-active_modules: [blog]
+active_modules: [tags, blog]
 author: Conrad Dean
 canonical_url: http://blog.conradpdean.com/
 ignore_files: ['rstblog', 'e', '.git','.gitignore', '.gitmodules', '.*', '_*', 'config.yml', 'Makefile', 'README', '*.conf']
