@@ -1,8 +1,6 @@
 #!/bin/bash
-if [ ! -d rstblog ]
-    then
-    git submodule init && git submodule update
-fi
+git submodule init
+git submodule update
 
 if [ ! -d e ]
     then
