@@ -27,6 +27,8 @@ You can also put .rst files in the top level directory and it'll make individual
     rstblog-skeleton/about.rst
     rstblog-skeleton/resume.rst
 
+You can store posts that you haven't finished yet in the `_drafts` folder, as rstblog will ignore them until you're ready to publish them.  This way you can keep your work in progress under source control, and simply move them to the right folder when you're ready to share your ideas.
+
 Tell `rstblog` to generate the site with
 
     make build
