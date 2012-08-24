@@ -10,15 +10,28 @@ for now I just want to get it a default installer working.
     # install dependencies and everything else
     make install
 
-Now add blog posts by creating .rst files.
+
+Now edit `blog-host` to contain the path to where your files are hosted.  For me it's `~/blog/public/` but for you it might be `webmaster@brosblogging.com:~/public/`.  Any valid rsync target should do, just be sure to have the trailing directory slash at the end!
+
+Use it
+------
+
+Now add blog posts by creating .rst files, and mark their creation date by putting them in folders structured like
+    
+    rstblog-skeleton/2012/08/20/what.rst
+
+Rstblog will read directories like that and tag them with the correct date in your archives and in the front page's list of posts.
+
+You can also put .rst files in the top level directory and it'll make individual pages for them that you can link to from anywhere.
+
+    rstblog-skeleton/about.rst
+    rstblog-skeleton/resume.rst
 
 Tell `rstblog` to generate the site with
 
     make build
 
-Now edit `blog-host` to contain the path to where your files are hosted.  For me it's `~/blog/public/` but for you it might be `webmaster@brosblogging.com:~/public/`.  Any valid rsync target should do, just be sure to have the trailing directory slash at the end!
-
-upload the built site with:
+Upload the built site with:
     
     make upload
 
