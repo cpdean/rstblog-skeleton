@@ -4,7 +4,7 @@ clean:
 	rm -rf _build
 
 install:
-	./install.sh
+	./_install.sh
 	@echo ""
 	@echo ""
 	@echo ""
@@ -16,10 +16,10 @@ install:
 	@echo "appropriate rsync target, remote or local"
 
 build:
-	. e/bin/activate; run-rstblog build
+	. _e/bin/activate; run-rstblog build
 
 serve:
-	. e/bin/activate; run-rstblog serve
+	. _e/bin/activate; run-rstblog serve
 
 upload:
 	rsync -ruav _build/* `cat blog-host`

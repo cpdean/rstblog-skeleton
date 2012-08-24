@@ -1,8 +1,8 @@
 ---
-active_modules: [tags, blog]
+active_modules: [pygments, tags, blog]
 author: Conrad Dean
 canonical_url: http://blog.conradpdean.com/
-ignore_files: ['rstblog', 'e', '.git','.gitignore', '.gitmodules', '.*', '_*', 'config.yml', 'Makefile', 'README', '*.conf']
+ignore_files: ['rstblog', '.*', '_*', 'config.yml', 'Makefile', 'README', '*.conf']
 modules:
     pygments:
         style: tango
